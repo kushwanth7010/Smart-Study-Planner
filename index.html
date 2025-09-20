@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="app-container">
+        <header>
+            <h1>Smart Study Planner</h1>
+            <p>Organize your academic tasks and boost your productivity.</p>
+            <button id="theme-toggle">🌙 Toggle Dark Mode</button>
+        </header>
+
+        <section class="planner-form-section">
+            <form id="task-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="task-title">Task / Subject</label>
+                        <input type="text" id="task-title" placeholder="e.g., Read Chapter 3 of History" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" id="due-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" required>
+                            <option value="High">High</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="add-task-btn">Add Study Goal</button>
+            </form>
+        </section>
+
+        <section class="progress-section">
+            <h2>Progress</h2>
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+        </section>
+
+        <section class="task-controls">
+            <input type="text" id="search-task" placeholder="Search tasks...">
+            <select id="filter-tasks">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </section>
+
+        <section class="task-list-section">
+            <h2>Your Study Goals</h2>
+            <div id="task-list-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for your GitHub Profile.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
