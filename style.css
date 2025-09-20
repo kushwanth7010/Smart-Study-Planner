@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #1976d2;
+    --primary-hover-color: #125a9c;
+    --secondary-color: #f0f6ff;
+    --text-color: #222;
+    --light-text-color: #666;
+    --border-color: #cbd5e1;
+    --card-bg-color: #e6f0ff;
+    --danger-color: #e53935;
+    --success-color: #43a047;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Dark mode */
+body.dark {
+    --secondary-color: #0d1b2a;
+    --text-color: #f1f5f9;
+    --card-bg-color: #1b263b;
+    --border-color: #334155;
+    --light-text-color: #94a3b8;
+    background: #0a192f;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#theme-toggle {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #dce7f7;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+#progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--primary-color);
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+/* Task Controls */
+.task-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.task-controls input,
+.task-controls select {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: #fff;
+}
+body.dark .task-controls input,
+body.dark .task-controls select {
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+/* Task Items */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-color);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+}
+.task-item.completed p { text-decoration: line-through; color: var(--light-text-color); }
+.task-details p { font-weight: 500; }
+.task-actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
